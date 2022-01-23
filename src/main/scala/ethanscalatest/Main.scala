@@ -10,9 +10,9 @@ object Main {
 
     println(s"\nReading counter records from file: ${args.head}")
 
-    val records = extractCountRecordFromOutputs(args.head)
+    val records = extractCounterRecordsFromOutputFile(args.head)
 
-    val totals = calculateTotals(records)
+    val totals = calculateGrantTotals(records)
     println(s"\nTotal count: $totals")
 
     val dailyTotals = calculateDailyTotals(records)
@@ -32,7 +32,7 @@ object Main {
     println("\nDone!\n")
   }
 
-  def calculateTotals(records: Vector[CounterRecord]) =
+  def calculateGrantTotals(records: Vector[CounterRecord]) =
     records.map(_.count).reduce(_ + _) 
 
   def calculateDailyTotals(records: Vector[CounterRecord]) =
@@ -42,7 +42,6 @@ object Main {
 
   def getTopRecordsWithMostCount(records: Vector[CounterRecord], take: Int) =
     records
-      .sortWith(_.count > _.count)
+      .sortBy(_.count > _.count)
       .take(take)
-      .toVector
 }

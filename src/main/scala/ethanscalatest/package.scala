@@ -17,7 +17,7 @@ package object counterrecord {
     CounterRecord(datetime, tokens(1).toInt)
   }
   
-  def extractCountRecordFromOutputs(filePath: String) = 
+  def extractCounterRecordsFromOutputFile(filePath: String) = 
   readLinesFromFile(filePath).map(parseStringToCounterRecord)
   
   def readLinesFromFile(path: String) = {

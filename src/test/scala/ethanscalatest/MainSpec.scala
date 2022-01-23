@@ -15,14 +15,14 @@ class MainSpec extends AnyFlatSpec with Matchers {
     }
   }
 
-  "The calculateTotals method" should "return sum of counts" in {
+  "The calculateGrantTotals method" should "return sum of counts" in {
     val records = Vector(
       CounterRecord(LocalDateTime.now(), 1),
       CounterRecord(LocalDateTime.now(), 3),
       CounterRecord(LocalDateTime.now(), 5),
     )
 
-    val totals = Main.calculateTotals(records)
+    val totals = Main.calculateGrantTotals(records)
     totals shouldEqual 9
   }
 
