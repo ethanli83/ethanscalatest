@@ -5,6 +5,11 @@ The program
 2. Aggregate the records to get expected statisitcs 
 3. Display the results in console
 
+Error handling
+1. The programm checks if the a file path for the output file, and throws error if no provided
+2. If the file is corrupted, and program fails to extract records, runtime exception will be thrown.
+3. I have tried using Either / Try to handle exception in a different branch [error-handling](https://github.com/ethanli83/ethanscalatest/tree/error-handling)
+
 # Get started
 The project is built with SBT. Please refers to [Installing SBT](https://www.scala-sbt.org/1.x/docs/Setup.html) for setup instruction.
 
