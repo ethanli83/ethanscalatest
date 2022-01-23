@@ -6,9 +6,9 @@ The program
 3. Display the results in console
 
 Error handling
-1. The programm checks if the a file path for the output file, and throws error if no provided
-2. If the file is corrupted, and program fails to extract records, runtime exception will be thrown.
-3. I have tried using Either / Try to handle exception in a different branch [error-handling](https://github.com/ethanli83/ethanscalatest/tree/error-handling)
+1. The programm checks if file path for the output file is given, and throws error if no provided
+2. If the file is corrupted, or program fails to extract records (like missing count, or incorrect date format), runtime exception will be thrown.
+3. I have tried using Either / Try to handle exception in a different branch [error-handling](https://github.com/ethanli83/ethanscalatest/tree/error-handling). In the branch, runtime error will be handled at top level. Skipping incorrect record can be implemented in the branch.
 
 # Get started
 The project is built with SBT. Please refers to [Installing SBT](https://www.scala-sbt.org/1.x/docs/Setup.html) for setup instruction.
