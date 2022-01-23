@@ -5,9 +5,6 @@ import org.scalatest.matchers.should.Matchers
 
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
-import scala.util.Success
-import scala.util.Failure
-
 
 class CounterRecordSpec extends AnyFlatSpec with Matchers {
   "parseStringToCounterRecord" should "parse string to CounterRecord" in {
