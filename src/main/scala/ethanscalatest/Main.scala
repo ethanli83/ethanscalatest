@@ -42,6 +42,6 @@ object Main {
 
   def getTopRecordsWithMostCount(records: Vector[CounterRecord], take: Int) =
     records
-      .sortBy(_.count > _.count)
+      .sortWith(_.count > _.count)
       .take(take)
 }

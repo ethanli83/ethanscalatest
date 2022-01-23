@@ -5,9 +5,9 @@ The program
 2. Aggregate the records to get expected statisitcs 
 3. Display the results in console
 
+# Get started
 The project is built with SBT. Please refers to [Installing SBT](https://www.scala-sbt.org/1.x/docs/Setup.html) for setup instruction.
 
-# Get started
 To run the program, use following command:
 ```shell
 sbt "run ./data/outputs"
