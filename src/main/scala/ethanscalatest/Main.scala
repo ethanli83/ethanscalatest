@@ -10,8 +10,12 @@ object Main {
 
     println(s"\nReading counter records from file: ${args.head}")
 
-    val records = extractCounterRecordsFromOutputFile(args.head)
-
+    val result = extractCounterRecordsFromOutputFile(args.head)
+    val records = result match {
+      case Left(message) => throw new RuntimeException(s"Fail to process output file. errors: $message")
+      case Right(records) => records
+    }
+    
     val totals = calculateGrantTotals(records)
     println(s"\nTotal count: $totals")
 
